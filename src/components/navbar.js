@@ -1,24 +1,28 @@
+import { Link, useMatch, useResolvedPath } from "react-router-dom"
+
+import Plusprint from "../style/img/pluslogo.png"
 import "../style/navbar.css"
 
-export function Navbar() {
+function GetNavLink({url, children}) {
+    const resolvedPath = useResolvedPath(url)
+    const isActive = useMatch({ path: resolvedPath.pathname })
+    return (
+        <li className={`nav-item ${isActive ? "active" : ""}`}>
+            <Link to={url} className="nav-link">
+                {children}
+            </Link>
+        </li>
+    )
+}
+
+export default function Navbar() {
     return (
         <nav className="navbar">
             <ul className="navbar-nav">
-                <li className="nav-item">
-                    <a href="/" className="nav-link">Home</a>
-                </li>
-                <li className="nav-item">
-                    <a href="/about" className="nav-link">Produkter</a>
-                </li>
-                <li className="nav-item">
-                    <a href="/services" className="nav-link">Kontakt</a>
-                </li>
-                <li className="nav-item">
-                    <a href="/contact" className="nav-link">Om mig</a>
-                </li>
+                <GetNavLink url="/"><img src={Plusprint} className="pluslogo" alt="logo"/></GetNavLink>
+                <GetNavLink url="/products">Produkter</GetNavLink>
+                <GetNavLink url="/about">Om oss</GetNavLink>
             </ul>
         </nav>
     )
 }
-
-export default Navbar
