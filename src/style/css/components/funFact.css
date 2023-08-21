@@ -1,0 +1,31 @@
+.container {
+    border: 1px solid #ccc;
+    margin: 2rem;
+    width: 40%;
+}
+  
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    font-size: 20px;
+}
+  
+.toggle-icon {
+    font-size: 25px;
+}
+  
+.content {
+    padding: 1rem;
+    background-color: #fff;
+    transition: 0.3s;
+}
+  
+.closed {
+    height: 0;
+    font-size: 0;
+    transition: 0.1s;
+}

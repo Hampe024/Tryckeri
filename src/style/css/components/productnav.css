@@ -1,0 +1,39 @@
+.productsNav {
+    padding: 20px 0px;
+    height: 350px;
+    width: 100%;
+    max-width: 1000px;
+    background-color: rgb(223, 223, 223);
+    position: absolute;
+    z-index: 1;
+    box-shadow: 5px 10px 8px rgb(135, 135, 135);
+}
+
+.productsNavItems {
+    display: grid;
+    grid-column-gap: 6.66666%;
+    grid-row-gap: 30px;
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: 160px 160px;
+}
+
+.productsNavItems a {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.productsNavItems a:hover img {
+    transform: scale(1.1);
+}
+
+.productsNav a img {
+    margin-top: 5px;
+    width: 90%;
+    height: 90%;
+    transition: transform 0.3s ease;
+}

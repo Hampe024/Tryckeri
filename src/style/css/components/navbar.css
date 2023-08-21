@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap');
+
+.navbar {
+    height: 2rem;
+    background-color: #dadada;
+    padding: 10px 0;
+    font-size: 23px;
+    margin-left: -100vw;
+    margin-right: -100vw;
+    padding-left: 100vw;
+    padding-right: 100vw;
+    font-family: 'Kanit', sans-serif;
+}
+  
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.nav-item {
+    margin: 0 20px;
+}
+
+.nav-item:first-child {
+    margin-right: auto;
+}
+  
+.nav-link {
+    color: #333;
+    text-decoration: none;
+}
+ 
+.active a{
+    color: #292929;
+}
+
+.nav-link, .nav-item {
+    transition: color 1s;
+}
+
+.nav-link:hover, .nav-item:hover {
+    color: #808080;
+}
+
+.pluslogo {
+    width: 250px; 
+}
+
+.productsBtn {
+    cursor: pointer;
+    font-style: italic;
+}
+
+.icon {
+    vertical-align: middle;
+    font-size: 1.3em;
+    opacity: 0;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+  
+.up {
+    vertical-align: top;
+    animation-name: fadeIn;
+}
+  
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+  
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+  
+.fade-in {
+    animation-name: fadeIn;
+}
+  
+.fade-out {
+    animation-name: fadeOut;
+}
+  
